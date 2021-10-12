@@ -13,7 +13,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
   
- - task: Checkmarx AST@0
+- task: Checkmarx AST@0
   inputs:
     CheckmarxService: 'ast demo'
     projectName: '$(Build.Repository.Name)'
