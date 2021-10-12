@@ -5,6 +5,11 @@
 
 trigger:
 - master
+- task: Checkmarx AST@0
+  inputs:
+    CheckmarxService: 'ast demo'
+    projectName: 'Vulnerable App'
+    tenantName: 'jason_demo'
 
 pool:
   vmImage: ubuntu-latest
