@@ -17,6 +17,12 @@ pool:
 steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
+  
+  - task: Checkmarx AST@0
+  inputs:
+    CheckmarxService: 'ast demo'
+    projectName: '$(Build.Repository.Name)'
+    tenantName: 'jason_demo'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
