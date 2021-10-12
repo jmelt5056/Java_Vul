@@ -1,9 +1,4 @@
 # Starter pipeline
-- task: Checkmarx AST@0
-  inputs:
-    CheckmarxService: 'ast demo'
-    projectName: '$(Build.Repository.Name)'
-    tenantName: 'jason_demo'
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -18,7 +13,7 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
   
-  - task: Checkmarx AST@0
+ - task: Checkmarx AST@0
   inputs:
     CheckmarxService: 'ast demo'
     projectName: '$(Build.Repository.Name)'
